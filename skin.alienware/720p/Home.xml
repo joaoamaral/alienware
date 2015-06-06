@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <onload>XBMC.RunScript("special://skin\scripts\home.py")</onload>
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>CommonBackgroundNoExit</include>
+    <control type="label">
+      <description>Welcome to alpha ui</description>
+      <font>goodtime10</font>
+      <top>70</top>
+      <textcolor>red</textcolor>
+      <width>500</width>
+      <height>50</height>
+      <left>170</left>
+      <label>31600</label>
+	  <scroll>true</scroll>
+    </control>
+    <!-- Help box at the bottom of the screen -->
+    <control type="group" id="1000">
+      <top>500</top>
+      <left>400</left>
+      <height>110</height>
+      <width>480</width>
+      <visible>!Skin.HasSetting(help_box_has_been_dismissed)</visible>
+      <!-- only visible if it's never been dismissed-->
+      <control type="image">
+        <width>480</width>
+        <height>110</height>
+        <texture>special://skin/media/alienware/Power_box.png</texture>
+      </control>
+      <control type="group">
+        <left>10</left>
+        <top>5</top>
+        <height>60</height>
+        <width>460</width>
+        <control type="image">
+          <top>10</top>
+          <height>40</height>
+          <width>50</width>
+          <aspectratio>keep</aspectratio>
+          <texture>special://skin/media/alienware/icon_noticecontroller.png</texture>
+        </control>
+        <control type="label">
+          <aligny>center</aligny>
+          <left>60</left>
+          <height>60</height>
+          <width>400</width>
+          <wrapmultiline>true</wrapmultiline>
+          <font>small_item</font>
+          <label>31609</label>
+        </control>
+      </control>
+      <control type="image">
+        <top>75</top>
+        <height>25</height>
+        <width>480</width>
+        <aspectratio>keep</aspectratio>
+        <texture>special://skin/media/alienware/localized/X_dismiss.png</texture>
+      </control>
+    </control>
+
+    <!-- Install failed box at the bottom of the screen -->
+    <control type="group" id="1001">
+      <top>500</top>
+      <left>-1460</left>
+      <visible>True</visible>
+      <control type="image">
+        <width>460</width>
+        <height>100</height>
+        <texture>special://skin/media/alienware/Power_box2.png</texture>
+      </control>
+      <control type="image">
+        <top>20</top>
+        <left>15</left>
+        <height>32</height>
+        <width>40</width>
+        <aspectratio>keep</aspectratio>
+        <texture>special://skin/media/alienware/icon_noticealert_small.png</texture>
+      </control>
+      <!--
+            <control type="image">
+                <top>65</top>
+                <left>130</left>
+                <height>25</height>
+                <width>200</width>
+                <aspectratio>keep</aspectratio>
+                <texture>special://skin/media/alienware/localized/X_dismiss.png</texture>
+            </control>
+            -->
+      <control type="label">
+        <top>20</top>
+        <left>70</left>
+        <alignx>left</alignx>
+        <width>370</width>
+        <height>70</height>
+        <font>small_item</font>
+        <wrapmultiline>true</wrapmultiline>
+        <label>31828</label>
+      </control>
+    </control>
+
+    <!-- New Updates box at the bottom of the screen -->
+    <control type="group" id="1002">
+      <top>680</top>
+      <left>-1020</left>
+      <visible>True</visible>
+      <control type="image">
+        <top>0</top>
+        <left>0</left>
+        <height>20</height>
+        <width>20</width>
+        <aspectratio>keep</aspectratio>
+        <texture>special://skin/media/alienware/icon_download.png</texture>
+      </control>
+      <control type="label">
+        <top>0</top>
+        <left>25</left>
+        <textcolor>red</textcolor>
+        <width max="820">auto</width>
+        <scroll>true</scroll>
+        <height>50</height>
+        <alignx>left</alignx>
+        <font>small_item</font>
+        <label>31829</label>
+      </control>
+    </control>
+
+
+    <control type="group">
+      <top>180</top>
+      <left>170</left>
+      <control type="list" id="9000">
+        <width>1000</width>
+        <height>400</height>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <ondown>9001</ondown>
+        <focusposition>1</focusposition>
+        <movement>1</movement>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="280" width="235">
+          <control type="image">
+            <left>0</left>
+            <width>230</width>
+            <height>265</height>
+            <texture>special://skin/media/alienware/Power_box.png</texture>
+          </control>
+          <control type="image">
+            <top>60</top>
+            <height>80</height>
+            <alignx>center</alignx>
+            <width>230</width>
+            <aspectratio>keep</aspectratio>
+            <description>The icon</description>
+            <texture>$INFO[ListItem.icon]</texture>
+          </control>
+          <control type="label">
+            <top>180</top>
+            <alignx>center</alignx>
+            <width>230</width>
+            <height>70</height>
+            <font>goodtime14</font>
+            <align>center</align>
+            <aligny>top</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="280" width="235">
+          <control type="image">
+            <left>0</left>
+            <height>265</height>
+            <width>2</width>
+            <texture>special://skin/media/alienware/white_border.png</texture>
+          </control>
+          <control type="image">
+            <left>0</left>
+            <height>2</height>
+            <width>230</width>
+            <texture>special://skin/media/alienware/white_border.png</texture>
+          </control>
+          <control type="image">
+            <left>230</left>
+            <height>265</height>
+            <width>2</width>
+            <texture>special://skin/media/alienware/white_border.png</texture>
+          </control>
+          <control type="image">
+            <top>265</top>
+            <left>0</left>
+            <height>2</height>
+            <width>230</width>
+            <texture>special://skin/media/alienware/white_border.png</texture>
+          </control>
+          <control type="image">
+            <left>0</left>
+            <width>230</width>
+            <height>265</height>
+            <texture>special://skin/media/alienware/power_selected.png</texture>
+          </control>
+          <control type="image">
+            <top>60</top>
+            <alignx>center</alignx>
+            <height>80</height>
+            <width>230</width>
+            <aspectratio>keep</aspectratio>
+            <description>The icon</description>
+            <texture>$INFO[ListItem.icon]</texture>
+          </control>
+          <control type="label">
+            <top>180</top>
+            <alignx>center</alignx>
+            <width>230</width>
+            <height>70</height>
+            <font>goodtime14</font>
+            <textcolor>white</textcolor>
+            <align>center</align>
+            <aligny>top</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="91">
+            <label>31605</label>
+            <!-- Launch Steam -->
+            <onclick>XBMC.RunScript("special://skin\scripts\launch_steam.py")</onclick>
+            <icon>special://skin/media/alienware/icon_SteamLogo.png</icon>
+          </item>
+          <item id="92">
+            <label>31606</label>
+            <!-- settings -->
+            <onclick>XBMC.RunScript("special://skin\scripts\settings.py")</onclick>
+            <icon>special://skin/media/alienware/icon_settings.png</icon>
+          </item>
+          <item id="93">
+            <label>31608</label>
+            <!-- help -->
+            <icon>special://skin/media/alienware/icon_Helpcontroller.png</icon>
+            <onclick>XBMC.RunScript("special://skin\scripts\help.py")</onclick>
+          </item>
+          <item id="90">
+            <label>31604</label>
+            <!-- POWER -->
+            <onclick>XBMC.RunScript("special://skin\scripts\power_menu.py")</onclick>
+            <icon>special://skin/media/alienware/icon_power.png</icon>
+            <thumb>special://skin/media/alienware/icon_power.png</thumb>
+          </item>
+        </content>
+      </control>
+    </control>
+  </controls>
+</window>
