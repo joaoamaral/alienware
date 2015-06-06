@@ -226,17 +226,16 @@
             <onclick>XBMC.RunScript("special://skin\scripts\launch_steam.py")</onclick>
             <icon>special://skin/media/alienware/icon_SteamLogo.png</icon>
           </item>
+          <item id="93">
+            <label>31608</label> <!--  old help, new Kodi -->
+            <icon>special://skin/media/alienware/icon_kodi.png</icon>
+            <onclick>XBMC.RunScript("special://skin\scripts\launch_kodi.py")</onclick>
+          </item>
           <item id="92">
             <label>31606</label>
             <!-- settings -->
             <onclick>XBMC.RunScript("special://skin\scripts\settings.py")</onclick>
             <icon>special://skin/media/alienware/icon_settings.png</icon>
-          </item>
-          <item id="93">
-            <label>31608</label>
-            <!-- help -->
-            <icon>special://skin/media/alienware/icon_Helpcontroller.png</icon>
-            <onclick>XBMC.RunScript("special://skin\scripts\help.py")</onclick>
           </item>
           <item id="90">
             <label>31604</label>

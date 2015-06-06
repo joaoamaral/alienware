@@ -656,8 +656,9 @@ msgid "GO TO DESKTOP"
 msgstr ""
 
 msgctxt "#31608"
-msgid "HELP"
+msgid "Launch[CR]Kodi"
 msgstr ""
+
 
 msgctxt "#31609"
 msgid "Launch System Menu at anytime by pressing LT + LB + RT + RB + Guide button."
